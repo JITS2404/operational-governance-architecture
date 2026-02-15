@@ -1,0 +1,223 @@
+# ✅ CORRECT TICKET WORKFLOW - STEP BY STEP
+
+## 📋 Complete Status Flow
+```
+NEW → ASSIGNED_TO_TECHNICIAN → TECHNICIAN_INSPECTION → WORK_ANALYSIS → 
+RCA_REPORT_ADDED → ESTIMATION_CREATED → PENDING_ESTIMATION_APPROVAL → 
+ESTIMATION_APPROVED → PENDING_FINANCE_APPROVAL → INVOICE_SENT → 
+WORK_STARTED → WORK_IN_PROGRESS → WORK_COMPLETED → 
+COMPLETION_REPORT_UPLOADED → CUSTOMER_SATISFIED → CLOSED
+```
+
+---
+
+## STEP 1: CREATE TICKET (Reporter)
+**Account:** `reporter@maintenance.com` / `reporter123`
+
+1. Login to system
+2. Go to "Submit Ticket"
+3. Fill in ticket details
+4. Click Submit
+
+**Status:** `NEW`
+
+---
+
+## STEP 2: ASSIGN TECHNICIAN (Admin/Help Desk)
+**Account:** `admin@maintenance.com` / `admin123`
+
+1. Login as admin
+2. Go to "All Tickets"
+3. Find ticket with status `NEW`
+4. Click "Assign Technician"
+5. Select technician from dropdown
+6. Click Assign
+
+**Status:** `NEW` → `ASSIGNED_TO_TECHNICIAN`
+
+---
+
+## STEP 3: ACCEPT & INSPECT (Technician)
+**Account:** `tech@maintenance.com` / `tech123`
+
+1. Login as technician
+2. Go to "My Tickets"
+3. Find assigned ticket
+4. Click "Accept Assignment"
+5. Perform inspection
+
+**Status:** `ASSIGNED_TO_TECHNICIAN` → `TECHNICIAN_INSPECTION`
+
+---
+
+## STEP 4: WORK ANALYSIS (Technician)
+**Account:** Stay as `tech@maintenance.com`
+
+1. After inspection, update status
+2. Click "Move to Work Analysis"
+
+**Status:** `TECHNICIAN_INSPECTION` → `WORK_ANALYSIS`
+
+---
+
+## STEP 5: ADD RCA REPORT (Technician)
+**Account:** Stay as `tech@maintenance.com`
+
+1. On ticket detail page
+2. Add Root Cause Analysis (RCA) Report
+3. Enter findings and analysis
+4. Click "Submit RCA Report"
+
+**Status:** `WORK_ANALYSIS` → `RCA_REPORT_ADDED`
+
+---
+
+## STEP 6: CREATE ESTIMATION (Technician)
+**Account:** Stay as `tech@maintenance.com`
+
+1. After RCA is added
+2. Click "Create Quotation/Estimation"
+3. Add materials:
+   - Description: "AC Compressor"
+   - Quantity: 1
+   - Unit Price: 500
+4. Add labor:
+   - Description: "Installation"
+   - Hours: 4
+   - Rate: 50
+5. Click "Submit Estimation"
+
+**Status:** `RCA_REPORT_ADDED` → `ESTIMATION_CREATED` → `PENDING_ESTIMATION_APPROVAL`
+
+---
+
+## STEP 7: APPROVE ESTIMATION (Manager/Head/Supervisor)
+**Account:** `supervisor@maintenance.com` / `super123` OR `manager@maintenance.com` / `manager123`
+
+1. Login as supervisor/manager
+2. Go to "Estimation Manager"
+3. Click "Pending Review" tab
+4. Find ticket with status `PENDING_ESTIMATION_APPROVAL`
+5. Click "View" to review details
+6. Click "Approve"
+
+**Status:** `PENDING_ESTIMATION_APPROVAL` → `ESTIMATION_APPROVED` → `PENDING_FINANCE_APPROVAL`
+
+---
+
+## STEP 8: GENERATE & SEND INVOICE (Finance)
+**Account:** `finance@maintenance.com` / `finance123`
+
+1. Login as finance
+2. Go to "Finance Dashboard" or "Finance Quotations"
+3. Find ticket with status `PENDING_FINANCE_APPROVAL`
+4. Click "Generate Invoice"
+5. Review invoice details
+6. Click "Send Invoice"
+
+**Status:** `PENDING_FINANCE_APPROVAL` → `INVOICE_GENERATED` → `INVOICE_SENT`
+
+---
+
+## STEP 9: START WORK (Technician)
+**Account:** `tech@maintenance.com` / `tech123`
+
+1. Login as technician
+2. Go to "My Tickets"
+3. Filter by "Invoice Sent" status
+4. Click on ticket
+5. Click "Start Work" button
+
+**Status:** `INVOICE_SENT` → `WORK_STARTED`
+
+---
+
+## STEP 10: UPDATE TO IN PROGRESS (Technician)
+**Account:** Stay as `tech@maintenance.com`
+
+1. On ticket detail page
+2. Click "Update to In Progress"
+
+**Status:** `WORK_STARTED` → `WORK_IN_PROGRESS`
+
+---
+
+## STEP 11: COMPLETE WORK (Technician)
+**Account:** Stay as `tech@maintenance.com`
+
+1. When work is finished
+2. Click "Mark as Completed"
+
+**Status:** `WORK_IN_PROGRESS` → `WORK_COMPLETED`
+
+---
+
+## STEP 12: UPLOAD COMPLETION REPORT (Technician)
+**Account:** Stay as `tech@maintenance.com`
+
+1. Click "Upload Completion Report"
+2. Add completion details
+3. Submit report
+
+**Status:** `WORK_COMPLETED` → `COMPLETION_REPORT_UPLOADED`
+
+---
+
+## STEP 13: CUSTOMER APPROVAL (Reporter/Customer)
+**Account:** `reporter@maintenance.com` / `reporter123`
+
+1. Login as reporter
+2. Go to "My Tickets"
+3. Find completed ticket
+4. Review work
+5. Click "Approve" or "Satisfied"
+
+**Status:** `COMPLETION_REPORT_UPLOADED` → `CUSTOMER_SATISFIED`
+
+---
+
+## STEP 14: CLOSE TICKET (Admin/System)
+**Account:** `admin@maintenance.com` / `admin123`
+
+1. Login as admin
+2. Go to "All Tickets"
+3. Find ticket with status `CUSTOMER_SATISFIED`
+4. Click "Close Ticket"
+
+**Status:** `CUSTOMER_SATISFIED` → `CLOSED`
+
+---
+
+## 🔑 USER ROLES & RESPONSIBILITIES
+
+| Role | Account | Actions |
+|------|---------|---------|
+| **Reporter** | reporter@maintenance.com | Create tickets, Approve completion |
+| **Admin/Help Desk** | admin@maintenance.com | Assign technicians, Close tickets |
+| **Technician** | tech@maintenance.com | Accept, Inspect, Add RCA, Create estimation, Execute work |
+| **Manager/Supervisor** | manager@maintenance.com / supervisor@maintenance.com | Approve estimations |
+| **Finance** | finance@maintenance.com | Generate & send invoices |
+
+---
+
+## ⚠️ KEY POINTS
+
+1. **Technician creates the estimation** (not manager)
+2. **Manager approves the estimation** (not creates)
+3. Status `ESTIMATION_REQUIRED` does NOT exist in the system
+4. Correct status is `RCA_REPORT_ADDED` before creating estimation
+5. After estimation is created, it goes to `PENDING_ESTIMATION_APPROVAL`
+6. Manager's "Estimation Manager" page shows tickets in "Pending Review" tab for approval
+
+---
+
+## 🐛 YOUR CURRENT ISSUE
+
+The "Create Estimation" button in Estimation Manager is for **managers to create estimations manually** (alternative flow), but the dropdown is empty because:
+
+1. No tickets have status `RCA_REPORT_ADDED` OR `ESTIMATION_REQUIRED`
+2. The normal flow is: **Technician creates** → **Manager approves**
+
+**Solution:** 
+- Managers should use the "Pending Review" tab to approve estimations
+- Only use "Create Estimation" if you want managers to create estimations instead of technicians
