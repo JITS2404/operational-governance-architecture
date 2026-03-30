@@ -25,7 +25,7 @@ Operational Goverance Architecture
 
 ## 1. Project Overview
 
-PlumFlow Desk is a **multi-role, enterprise-grade maintenance ticketing system** designed for facilities management teams operating across multiple buildings and departments. It handles the complete lifecycle of a maintenance request — from initial submission through inspection, cost estimation, finance approval, work execution, and final customer sign-off.
+Operational Goverance Architectureis a **multi-role, enterprise-grade maintenance ticketing system** designed for facilities management teams operating across multiple buildings and departments. It handles the complete lifecycle of a maintenance request — from initial submission through inspection, cost estimation, finance approval, work execution, and final customer sign-off.
 
 ### What makes this production-ready
 
@@ -256,7 +256,7 @@ All endpoints require `Authorization: Bearer <token>` unless marked public.
 ### Prerequisites
 
 - Node.js 18+
-- PostgreSQL 14+ running on port 5433
+- PostgreSQL 17
 - npm or bun
 
 ### 1. Clone and install
