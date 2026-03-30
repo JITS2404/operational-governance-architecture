@@ -329,11 +329,11 @@ All variables live in `backend/.env`. Never commit this file — it is in `.giti
 
 ```env
 # ── Database ──────────────────────────────────────────────────────────────────
-DB_USER=postgres
-DB_HOST=localhost
-DB_NAME=Ticketing System
+DB_USER=
+DB_HOST=
+DB_NAME=
 DB_PASSWORD=<your_db_password>
-DB_PORT=5433
+DB_PORT=
 DB_SSL_REJECT_UNAUTHORIZED=true   # set false only for self-signed certs
 
 # ── JWT ───────────────────────────────────────────────────────────────────────
@@ -476,8 +476,7 @@ Separating `combined`, `error`, and `security` logs allows different retention p
 ---
 
 ## 13. Author
-
-**Jerom Isaac**  
+ 
 Full-Stack Engineer · Security-Focused · Enterprise Systems
 
 This project demonstrates end-to-end ownership of a production-grade system — from database schema design and REST API architecture through frontend state management, security hardening, structured logging, and deployment configuration.
